@@ -1,0 +1,204 @@
+#+TITLE: Shape Up
+https://basecamp.com/shapeup/webbook
+* Summary - how to set up and manage a project
+This book is intended for the 'designer', or 'shaper' - basically the product owner / business analyst in our context. The ideal team here is 1 designer, 2 devs. The designer is the product owner, and is also in a sense a 'manager' of the devs (though a /very/ hands off one). 
+
+A note from me: the devs will be nearly entirely autonomous and self-managing during the build process. For that reason I don't think this will work well with contracted resources. I also think it (like every other methodology) will work /much/ better if the team is a fixed one, and you're not setting up the team-of-three specifically for the project, and everyone is used to working with one another.
+
+The process starts with the raw idea (the thing that is proposed, usually by the customer). From there it goes through 3 stages
+1. Shaping, where the designer takes the raw idea and produces a design
+2. Betting
+3. Building, where the devs build the thing. This will be done in 6 week cycles
+
+** The Designer receives the Raw Idea and Shapes it into a Design
+You're trying to end up with a design at a medium level of fidelity - more detailed than just words, but not wireframes. You're trying to convey the /boundaries/ around the thing, where you have intentionally set the boundaries so it can be built in a six-week window.
+
+All of this happens in your own private sphere, you're not sharing it with the devs until the end.
+
+*** From raw idea to narrow descriptions
+**** When the raw idea is proposed, the default response should be 'interesting. Maybe some day'. That's it. Too early to say yes or no.
+**** Dig into it, figure out the underlying 'whys' of the request. Users tend to ask for the swiss army knife they know when the problem they are having requires one tool.
+**** At this stage, you are defining the problem in words.
+**** If it seems too big to be done in 6 weeks, chop bits off. Use the timebox constraint to focus on what is important. 
+**** When the problem is 'narrow', and you know what 'done' looks like, you can start shaping solutions.
+*** From descriptions to fat-marker sketches
+**** Sit on your own or with someone you trust, who understands how the business works.
+**** Create 'breadboards' - box-and-arrow diagrams with names of places the user will go, ways they will interact with the places, and connections (arrows) between the places
+**** Create 'fat marker sketches' of the UI - visual elements which convey the idea of what is wanted, without any detail.
+**** You're trying to get the /elements/ of the design - 'the user will click a button to do xyz'. Or 'the user will see a grid like calendar for the next 2 months' 
+**** Be ruthless about eliminating nice-to-haves, and if you see applications for a piece of functionality beyond the current use case, make it explicit that this is outside the boundary of the current piece of work.
+*** Examine the design for implentation time-bombs
+**** While your design will not include specific implementations (that's the devs job), you need to know for each part of your design that an implementation is plausible given the six week constraint.
+**** In particular you want to avoid 'tail risk' for implementations - things you ask for in the design that can look simple to implement, but in reality can end up extending the shipping date by 2-3 times the 6 week window. Technical solutioning is a minefield of these things.
+**** This really comes down to experience and design sense; knowing what is possible, knowing what sort of problem tends to lead to these rabbit holes
+**** Walk through the design again, looking out for holes, and making sure you at least have an idea of each piece could technically be implemented
+**** Where you don't, you need to loop in technical experts. But be concious, and emphasise to them that this is still /private work/, the clay isn't yet dry. use whiteboards, not powerpoints. Stick to what you already have, and ask their opinion on how this could be implemented in a 6 week period. Don't ask them for design proposals on things you haven't got a design for yet
+*** Writing the pitch
+* Introduction
+This book is the techniques of how they do product development at BaseCamp.
+** Long, endless projects
+** No time to think strategically about product
+** Slower velocity
+** Basecamp dev story
+*** Hammering product scope to fit time constraints
+*** A switch to repeated cycles
+*** developed a language to talk about product development 
+*** This book is the methodology and language that emerged
+** This book
+*** basic truths
+*** A language
+*** Specific processes
+** Main ideas
+*** 6 week cycles - long enough to build something meaningful, short enough to see the end looming. 6 weeks is the unit, don't worry about micromanging peoples time within it
+*** Shaping the work before giving it to devs - defining key elements of a solution. At the right level of detail - in the middle somewhere. Focus less on estimates and more on appetite - how much do we want to spend? 
+*** Making teams responsible - /full/ responsibility to a small integrated team of designers and programmers. To define tasks, adjust scope, build vertical slices. Managers don't create tickets and let programmers pick them out, so managers can spend more time on the shaping
+*** Targetting risk - specifically the risk of not shipping on time (not, say, building the wrong thing). The risk of getting stuck, of bogging down. The shaping helps by answering questions before the devs start to work on it. Bets are capped to 6 weeks, and programs don't get extensions if they overrun. Integration is done early, and the most unknown bit are done first.
+* Part 1: Shaping - Pre-work
+** C2: Principles
+*** Wireframes are too Concrete, words are too abstract
+**** Wireframes have too much detail, leaving no room for developer creativity
+**** Overspecifying leads to estimation errors
+**** There's a sweet spot in specificity for good estimation
+**** Words are too vague - 'build a calendar view' is not enough info to consider tradeoffs between alternative approaches. There's no context.
+**** Underspecified projects grow out of control because there's not enough boundaries
+*** Dot grid calendar example
+**** Basecamp users wanted a calendar
+**** Calendars are hard, you could easily spend 6 months on it
+**** We only had 6 weeks - so what should we work on?
+**** We decided on a bare-bones, read-only stripped down version
+**** The level of fidelity of design was a *fat marker sketch*: lots of detail left out, lots of room for interpretation, creativity. But at the same time, specific in how it works
+[[./calendar_sketch_fat_marker.png]]
+[[./calendar_result.png]]
+*** Properties of a good design
+**** It's Rough - obviously unfinished. obvious open spaces. 
+**** It's Solved - but still it's though through. The main elements are there.
+**** It's Bounded - it indicates what /not/ to do.
+*** Who shapes
+**** To design like this, you need techinical skills, UX design sense, and business knowledge. Either in one person, or collectively
+#+begin_quote
+You don’t need to be a programmer to shape, but you need to be technically literate. You should be able to judge what’s possible, what’s easy and what’s hard. Knowledge about how the system works will help you see opportunities or obstacles for implementing your idea.
+#+end_quote
+**** It's strategic and creative.
+*** Two Tracks - shaping and building. Keep them separate. Shaping work is kept private until it's betted on.
+*** Steps to shaping (expanded on in next chapters)
+**** 1: set boundaries - how much is the idea worth, and how is the problem defined?
+**** 2: Rough out the elements - sketching a solution
+**** 3: Address risks and rabbit holes - review critically to find the holes and unanswered questions. 
+**** 4: Write the pitch - package it up formally, send it to the betting table.
+** C3: Setting Boundaries - putting limits around the raw idea
+*** Setting the appetite - how much time commitment does this idea deserve?
+**** *appetite* is the time budget for a standard team size - a timebox
+**** Two sizes:
+***** *small batch* - one designer and 1-2 programmers can build in 1-2 weeks. Group these together into a 6 week cycle
+***** *big batch* - takes the same team size a full six weeks
+**** If the scope is so big it exceeds even a big batch - /narrow the scope/ or break off a part of the project
+*** Fixed time, variable scope - an appetite is not an estimate.
+**** An estimate starts with a design and ends with a number. An appetite does things the other way around - start with a number (the timebox) and use that to drive your design
+**** The timebox forces you to make scope decisions, to make tradeoffs between quality and scope.
+**** timebox both the shaping and the development
+*** There is no universal 'best', it's always relative to your constraints
+**** Full on database or flat text file?
+**** Fully redesigned landing page, or just bodge it in what already exists?
+*** Respond to raw ideas with 'Interesting. Maybe some day'. It's too early to say yes or no, you don't know enough about how important it it. So don't try.
+*** Dig into the problem - unpack it, look for the 'why' of the request. You might find there's an easier way
+**** What were the users doing when they thought of the request?
+**** Move from 'do everything a calendar does' to 'help me see free spaces so I can figure out how when I can schedule meetings'
+*** Avoid grab-bags - 'redesigns' or 'refactorings' that aren't driven by a specific use case. It's too hard to figure out what it means, what the boundaries are, what 'done' looks like.
+**** Move from 'redesign the files section' to 'we need to rethink the files section because sharing multiple files takes too many steps.' - then you can start asking the right questions. 
+**** Beware the '2.0' label. Doing a 'Files 2.0' is a sign you aren't focused enough, you don't know what done looks like.
+** C4: Finding Elements
+*** Move at the right speed
+**** First, have the right people in the room when you're designing. That could very well be no-one. Most likely it's a trusted partner on the business side.
+**** Second, keep the level of detail fairly high. Wireframes will get you bogged down in details.
+**** The questions to ask at this stage are
+***** Where in the current system does this thing fit?
+***** How do you get to it?
+***** What are the key components/interactions?
+***** Where does it take you?
+**** Breadboarding and fat-marker sketches are the prototyping techniques to use
+*** breadboarding
+**** All the components and wiring of a real device, but no industrial design
+**** You might include an indicator light - but you won't think about what material the chassis is.
+**** You can discuss the the components and connections of the interface without specifying the visual design
+***** Places: screens, dialog boxes, menus
+***** Affordances: buttons and fields
+***** Connections: what places you can move to from a place
+**** Use words and arrows, not pictures
+[[./breadboard.png]]
+*** fat-marker sketches for communicating visuals
+**** the fat pen prevents you from adding detail
+[[./fat_marker2.png]]
+*** elements are the output
+*** leave room for designers - you never want to have to say to a dev 'I know I drew it like this, but ignore that'
+*** not deliverable yet - this is still 'private' work at this stage, not shareable
+*** no conveyor belt - YOU ARE NOT COMMITED YET
+** C5: Risks and Rabbit Holes
+*** The goal is to anticipate and mitigate major implementation issues that might arise
+*** You present your design with the assumption that the devs will be able to figure out implementations that fulfil your design and can be coded within the 6 weeks.
+**** Delaying issues - implementations that end up taking longer than you anticipated, that eat up chunks of your 6 weeks
+**** Stopping issues - problems that don't have a viable solution within the 6 weeks, leading to the project being abandoned pending a major rethink
+*** You are trying to eliminate /fat-tail unknowns/ - things that could end up extending the time-to-ship for multiples of what you thought
+[[./fat_tails.jpg]]
+*** look for rabbit holes - technical assumptions you've made that aren't fair 
+**** walk through a use-case in slow motion
+**** question the viability of each step:
+***** does this require new techinical work that we haven't done before?
+***** Are we making assumptions about how the parts fit together?
+***** Are we assuming a technical implementation exists that we couldn't come up with ourselves?
+***** Is there a hard decision we should settle in advance so it doesn't trip up the team?
+*** A lot of this has to do with prior experience and technical knowledge. You need to have it
+*** case-study: patching a hole
+**** You're writing a to-do application, with a basic screen showing all of the users to-dos.
+**** to-dos can be grouped by the user
+**** How do you display completed items? Should they be rendered at the bottom of the group? or at the bottom of the page, repeating the grouping?
+**** This is the kind of decision that, if left to a developer, they could waste a lot of cycles on coming up with different experiments.
+**** Your aim as a shaper is not so much to come up with the best solution, but to come up with something basic that eliminates tail risk. Something that is bounded.
+#+begin_quote
+As shapers, we’re thinking less about the ultimate design and more about basic quality and risk. With the compromised concept we get to keep all the elements that made the project worth doing—the groups of incomplete items—and we get to cut off a big tail of risk.
+#+end_quote
+
+*** declare out of bounds - when you work on a feature and see that by generalising you can apply it elsewhere, be ruthless about declaring everything that is not what you are working on to be out pf bounds
+*** cut back - when you design, you will get over-excited and put in things that are nice-to-haves. Get rid of them, don't mention it to the devs as a nice-to-have
+*** where you are unsure of whether there is a good implementation of something you want, talk to techinical experts. But be clear that this is just an idea, not something that's coming down the pipe yet.
+#+begin_quote
+The mood is friendly-conspiratorial: “Here’s something I’m thinking about… but I’m not ready to show anybody yet… what do you think?”
+#+end_quote
+**** do NOT ask 'Is this possible?'. It's always possible at some cost. Ask 'is this possible in 6-weeks'
+**** Emphasise you're looking for risks that could blow up the project. You're hunting for time bombs.
+**** Do it on a whiteboard, don't do a presentation. This emphasises that the clay is still wet. 
+**** Stick to what you're already done and ask for feedback, don't ask for proposals on what you haven't done yet.
+** C6: Writing the Pitch - put it in a form that other people can understand, digest, respond to, and present it.
+The purpose is to present a good potential bet.
+*** Ingredient 1: the Problem - the raw idea, the use case
+*** Ingredient 2: Appetite - how much time to spend on it, how that constrains the solution
+*** Ingredient 3: Solution - the core elements we came up with
+**** Help them see it
+**** Embedded sketches
+**** Annotated Fat Marker sketches
+*** Ingredient 4: Rabbit holes - call outs 
+*** Ingredient 5: No Gos
+*** Exmaples
+*** Ready to present
+* Part 2: Betting - How to choose amoung pitched projects
+** C7: Bets not Backlogs
+** C8: The Betting Table
+** C9: Place your Bets
+* Part 3: Building
+** C10: Hand over Responsibility
+** C11: Get One Piece Done 
+** C12: Map the Scopes
+** C13: Slow Progress
+** C14: Decide when to Stop
+** C15: Move On
+* Conclusion - key concepts
+** shaped over unshaped work
+** Appetites over estimates
+** pre-build Designs at the right abstractions level
+** Breadboards and fat-marker sketches
+** Capping downside / circuit breaker
+** Cycle length
+** Cool-down
+** Breaking projects into scopes
+** Downhill and uphill work
+** Comminicating about unknowns
+** Scope-hammering
