@@ -170,15 +170,21 @@ The mood is friendly-conspiratorial: “Here’s something I’m thinking about�
 ** C6: Writing the Pitch - put it in a form that other people can understand, digest, respond to, and present it.
 The purpose is to present a good potential bet.
 *** Ingredient 1: the Problem - the raw idea, the use case
+Going straight to solution is dangerous.
+
+The best problem definition is a single story that shows why the status quo doesn't work.
 *** Ingredient 2: Appetite - how much time to spend on it, how that constrains the solution
+We need to be able to do it in 6 weeks (or 2 weeks)
 *** Ingredient 3: Solution - the core elements we came up with
-**** Help them see it
-**** Embedded sketches
-**** Annotated Fat Marker sketches
+**** follow on for the sketches. A bit more concreteness that the fat-marker sketches, but still high level. Still not wireframes
+**** Take the current UI and draw on it.
+**** Annotated fat marker sketches on an iPad, with different color for annotation.
 *** Ingredient 4: Rabbit holes - call outs 
-*** Ingredient 5: No Gos
+*** Ingredient 5: No Gos - explicit things we're not doing here
 *** Exmaples
-*** Ready to present
+[[./pitch_ex_1.png]]
+**** 2 screenshots for the problem, fat-markers for the solution
+*** Ready to present - send it to people ahead of time to keep time at the betting table short
 * Part 2: Betting - How to choose amoung pitched projects
 ** C7: Bets not Backlogs
 ** C8: The Betting Table
